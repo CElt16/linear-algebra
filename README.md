@@ -1,2 +1,1 @@
-A Java function that converts a matrix to Row Echelon Form (REF) or Reduced Row Echelon Form (RREF).
-Row operations are displayed for better understanding.
+A Java package for performing matrix operations. Project will be updated regularly with new features and improvements.
