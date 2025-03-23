@@ -5,7 +5,7 @@ public class Matrix {
 	public int n; // column size
 	public double[][] grid; // values
 	
-	// Constructs the matrix as a zero matrix.
+	// Constructs the matrix with given size as a zero matrix.
 	Matrix(int m, int n) {
 		this.m = m; 
 		this.n = n;
