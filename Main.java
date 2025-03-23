@@ -70,7 +70,7 @@ public class Main {
 		
 		Matrix c = new Matrix(grid8);
 				
-		MatrixOperations op = new MatrixOperations();
+		MatrixOperator op = new MatrixOperator();
 		
 		Matrix d = op.product(a, b);
 		
