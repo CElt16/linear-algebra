@@ -33,7 +33,7 @@ public class MatrixOperator {
 		return result;
 	}
 	
-	// Takes the transpose of the given matrix and @returns a new transposed matrix.
+	// Takes the transpose of the given matrix and @returns the new transposed matrix.
 	public Matrix transpose(Matrix a) {
 		// Create a new matrix with swapped dimensions.
 		Matrix result = new Matrix(a.n, a.m);
