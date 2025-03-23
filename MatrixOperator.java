@@ -1,6 +1,6 @@
 package Matrix;
 
-public class MatrixOperations {
+public class MatrixOperator {
 
 	// 1 2 7    2 4
 	// 0 5 4    1 2
