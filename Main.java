@@ -70,12 +70,15 @@ public class Main {
 		
 		Matrix c = new Matrix(grid8);
 				
-		MatrixOperations op = new MatrixOperations();
+		MatrixOperator op = new MatrixOperator();
 		
-		Matrix d = op.product(a, b);
+		//Matrix d = op.product(a, b);
 		
-		d.print();
-		c.print();
-		op.reduceMatrix(c, true).print();
+		Matrix e = op.transpose(c);
+		
+		e.print();
+		
+		//d.print();
+		//op.reduceMatrix(c, true).print();
 	}
 }

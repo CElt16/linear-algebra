@@ -1,11 +1,12 @@
 package Matrix;
 
-public class MatrixOperations {
+public class MatrixOperator {
 
 	// 1 2 7    2 4
 	// 0 5 4    1 2
 	//		    9 0	
-
+	
+	// Takes the dot product of two given matrices. (a x b) then @returns it as a new matrix.
 	public Matrix product(Matrix a, Matrix b) {
 
 		// Multiplication result, set as zero matrix initially.
@@ -13,7 +14,7 @@ public class MatrixOperations {
 
 		// Dimension check for multiplicity.
 		if (a.n != b.m) {
-			System.out.println("Matrix multiplication cannot be done with given dimensions: " + "(columns of A): " + a.n
+			System.out.println("Error: Matrix multiplication cannot be done with given dimensions: " + "(columns of A): " + a.n
 					+ ", (rows of B): " + b.m);
 			return result; // Returns a null (zero) matrix if multiplication cannot be done.
 		}
@@ -32,6 +33,21 @@ public class MatrixOperations {
 		return result;
 	}
 	
+	// Takes the transpose of the given matrix and @returns a new transposed matrix.
+	public Matrix transpose(Matrix a) {
+		// Create a new matrix with swapped dimensions.
+		Matrix result = new Matrix(a.n, a.m);
+		
+		// Take the transpose. (i,j <=> j,i)
+		for(int i=0; i<a.m; ++i) {
+			for(int j=0; j<a.n; ++j) {
+				result.grid[j][i] = a.grid[i][j];	
+			}
+		}
+		
+		return result;
+	}
+	
 	// Helper function to swap two rows of a given matrix.
 	public static void swapRows(int r1, int r2, Matrix matrix) {
 		double[] temp = matrix.grid[r1];
@@ -39,8 +55,9 @@ public class MatrixOperations {
 		matrix.grid[r2] = temp;
 	}
 
+	// Transforms the given matrix A into its row echelon form or reduced row echelon form (without modifying A).
+	// @returns A new matrix representing the reduced form of A.
 	// @param rref : Set to false for row echelon form (REF), true for reduced row echelon form (RREF).
-	// @returns a new reduced matrix 
 	public Matrix reduceMatrix(Matrix matrix, boolean rref) {
 
 		// Create a deep copy of the given matrix.
