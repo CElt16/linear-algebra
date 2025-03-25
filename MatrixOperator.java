@@ -28,13 +28,8 @@ public class MatrixOperator {
 
 		return result;
 	}
-<<<<<<< HEAD
 
 	// Takes the transpose of the given matrix and @returns a new transposed matrix.
-=======
-	
-	// Takes the transpose of the given matrix and @returns the new transposed matrix.
->>>>>>> 014cd1607e2c70e563869aa12de4f54513142ff4
 	public Matrix transpose(Matrix a) {
 		
 		// Create a new matrix with swapped dimensions.
