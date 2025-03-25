@@ -13,7 +13,6 @@ public class Main {
 			    {1, 0, 0},
 			    {2, 1, 0},
 			    {3, 4, 1},
-
 			};
 		
 		double[][] grid2 = {
@@ -44,9 +43,10 @@ public class Main {
 			};
 		
 		double[][] grid6 = {
-				{1, 2, 3, 4},
-				{4, 5, 6, 7},
-				{6, 7, 8, 9}
+				{1, 2, -1, 3},
+				{0, 1, 2, 4},
+				{2, -1, 3, 0},
+				{0, 2, 1, 5}
 			};
 		
 		
@@ -76,7 +76,13 @@ public class Main {
 		
 		Matrix e = op.transpose(c);
 		
-		e.print();
+		Matrix x = new Matrix(grid6);
+		
+//		Matrix fReduced = op.reduceMatrix(f, true);
+//		fReduced.print();
+		System.out.println(op.findDeterminant(x));
+		
+		//e.print();
 		
 		//d.print();
 		//op.reduceMatrix(c, true).print();
