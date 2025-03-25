@@ -69,7 +69,7 @@ public class MatrixOperator {
 
 		double determinant = 0;
 		
-		// Choose 0'th column for finding the determinant. (Any row or column is possible, but i chose 0)
+		// Choose 0'th column for finding the determinant. (Any row or column is possible, but i choose column 0).
 		for (int i = 0; i < a.m; ++i) {
 			
 			double curr = grid[i][0];
